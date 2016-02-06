@@ -79,7 +79,7 @@ echo "answer-4: $answer_4"
 hamlet="$datasets/hamlet.txt"
 
 answer_5=$(cat $hamlet \
-    | grep 'bloody' \
+    | grep -i 'bloody' \
     | wc -w \
     | sed 's/ //g')
 
