@@ -127,8 +127,7 @@ peaks="$datasets/peaks.chr22.bed.gz"
 
 answer_9=$(gzcat $peaks \
     | cut -f4 \
-    | grep "CTCF" \
-    | grep -v "CTCFL" \
+    | grep -w "CTCF" \
     | wc -l \
     | sed 's/ //g')
 
